@@ -1,4 +1,5 @@
 #include"Subscriber.h"
+#include"PhoneBook.h"
 
 Subscriber::Subscriber(string name, string street_name, int number, string phone_number) {
 	this->name = name;
@@ -9,8 +10,9 @@ Subscriber::Subscriber(string name, string street_name, int number, string phone
 }
 
 void Subscriber::Search(string name) {
-	if (name == this->name) {
-		cout << name << ": " << this->number;
-
+	for (auto it = PhoneBook::Phone_Book.begin(); it != PhoneBook::Phone_Book.end(); it++) {
+		if (it->name == name) {
+			cout << it->phone_number << endl;
+		}
 	}
 }

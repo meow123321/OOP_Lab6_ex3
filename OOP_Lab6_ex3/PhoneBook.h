@@ -3,6 +3,7 @@
 #include<iostream>
 #include<list>
 #include<iterator>
+#include<string>
 
 using namespace std;
 
@@ -11,6 +12,5 @@ public:
 	list<Subscriber> Phone_Book;
 
 	PhoneBook();
-	friend void Subscriber::Search(string name);
 
 };
